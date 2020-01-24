@@ -1,0 +1,69 @@
+p {
+    color:tomato;
+    font-size: 20px;
+    font-weight:400;
+}
+h1 {
+    color:mediumblue;
+    text-align: center;
+    font-size:40px;
+}
+body {
+    background-color: cornsilk;
+}
+h2 {
+    color: teal;
+    font-family: 
+}
+li {
+    font-size: 20px;
+    color: midnightblue;
+}
+.favorite-section /*/for a class*/{
+    background-color:white;
+    
+
+}
+.section-header {
+    background-color: khaki;
+}
+#page-title /*for an ID*/{
+    background-color: darkgray;
+
+}
+#favorite-movie-title {
+    font-style:italic;
+    color: darkgreen;
+
+}
+#favorite-music-artist-name {
+    font-weight:bold;
+    color: blue;
+}
+#most-favorite-food {
+    text-decoration:underline;
+    color: deeppink;
+
+}
+.favorite-image {
+    border-radius: 25%;
+    filter:brightness(110%);
+    filter:hue-rotate(500deg);
+}
+
+table, th, td {
+    border: 1px  solid dodgerblue;
+    border-spacing: 5px;
+    height: 40px;
+    text-align: left;
+    vertical-align: top;
+    
+}
+th {
+    background-color:lightyellow;
+    color:lightcoral;
+}
+td {
+    background-color: wheat;
+    color:darkblue;
+}

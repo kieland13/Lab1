@@ -1,0 +1,11 @@
+.jumbotron {
+    background-color: cadetblue;
+    text-align: center;
+}
+body {
+    background-color: darksalmon;
+    font-weight: bold;
+}
+.col-md-5 {
+    font-size:25px;
+}

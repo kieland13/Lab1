@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>My Favorite Program</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="FavProgram.css" type="text/css">
+    </head>
+    <body class="m-2">
+        <div class="jumbotron">
+            <h1>Miles Per Gallon Calculator</h1>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-5">
+                <p>My favorite program that I have done so far was called <i>Miles Per Gallon Calculator.</i></p>
+                <p>This program asks the user about the last ten trips they have taken.</p>
+                <p>This could be as simple as going to the gas station, or going across the whole country.</p>
+                <p>The user has to input their starting gallons, ending gallons and how many miles they traveled.</p>
+                <p>It then calculates the MPG for that trip and up to ten trips.</p>
+            </div>
+
+            <div class="col-md-7">
+                <p>Here is an example of some of the code i wrote:</p>
+                <pre><code>
+                        for(int trip = 1; trip <  mpg.length; trip++) {
+			
+                            //ask user for how many gallons they began the trip with
+                            System.out.println("How many gallons did you have at the beggining trip " + trip + "?");
+                            startGalGas = scnr.nextDouble();
+                            
+                            //if they enter in a negative number, an error message will appear
+                            while (startGalGas < 0) {
+                                System.out.println("Number needs to be greater than 0, enter a positive number:");
+                                startGalGas = scnr.nextDouble();
+                            }
+                            
+                            //ask the user for how many gallons were left at end of trip
+                            System.out.println("How many gallons did you have at the end of trip " + trip + "?");
+                            endGalGas = scnr.nextDouble();
+                            
+                            //if they enter in a negative number, an error message will appear
+                            while (endGalGas < 0) {
+                                System.out.println("Number needs to be greater than 0, enter a positive number:");
+                                endGalGas = scnr.nextDouble();
+                            }
+                            
+                            //ask the user for how many miles they traveled for the one trip
+                            System.out.println("How far did you travel for trip " + trip + " in miles?");
+                            distTraveled = scnr.nextDouble();
+                </code></pre>
+            </div>
+        </div>
+
+    </body>
+</html>

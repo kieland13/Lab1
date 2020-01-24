@@ -1,0 +1,13 @@
+#real-alert {
+    color:white;
+    background-color: coral;
+    font-family: "Times New Roman";
+}
+#test-only {
+    color:white;
+    background-color:green;
+    height:60px;
+    border-style: dashed;
+    border-color:blue;
+    font-style: italic;
+}
