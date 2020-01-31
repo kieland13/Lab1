@@ -1,0 +1,12 @@
+.jumbotron {
+    background-color:aliceblue;
+    font-style: italic;
+    font-family: 'Slabo 27px', serif;
+    color:black;
+}
+body {
+    background-image: linear-gradient(to right,#5464f7,#1723c7);
+    font-weight: bold;
+    font-family: 'Noto Sans', sans-serif;
+    color: #f1960c;
+}
