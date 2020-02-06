@@ -52,7 +52,7 @@
     <button id="remove-selected-students">Remove selected students</button>
 
 <script>
-
+    //creating variables that connect to the buttons above
     let studentCount = document.querySelector('#student-count')
     let counter = 0
     studentCount.innerHTML = counter
@@ -65,7 +65,7 @@
 
     
 
-
+        //adding a student using the information the user typed in
     addStudent.addEventListener('click', function() {
         if (studentName.value.length == 0 || studentId.value.length == 0 || 
         studentGpa.value.length == 0 || studentGpa.value > 4 || studentGpa.value < 0) {
@@ -87,15 +87,16 @@
         counter = counter + 1 // or studentCount++
         studentCount.innerHTML = counter
     
-    
+        //toggling items with the select class
         newAddList.addEventListener('click', function() {
            this.classList.toggle("selected")
 
 
         })
     }})
+    //deleting items that had the select class
     removeStudents.addEventListener('click', function() {
-        let selectedStudents = document.getElementsByClassName("selected")
+        let selectedStudents = document.querySelectorAll(".selected")
         for (let i = 0; i < selectedStudents.length; i++) {
             selectedStudents[i].parentNode.removeChild(selectedStudents[i])
             counter = counter - 1
