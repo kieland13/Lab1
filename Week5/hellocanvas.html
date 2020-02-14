@@ -1,0 +1,26 @@
+<canvas id="canvas" height="800" width="800"></canvas>
+
+
+<script>
+
+let canvas = document.querySelector("#canvas")
+let context = canvas.getContext("2d")
+
+// x coordinate, y coordinate, width, height
+context.fillRect(50, 75, 100, 100)
+context.fillStyle = "green"
+context.fillRect(200, 100, 100, 50)
+context.strokeRect(200, 100, 100, 50)
+context.fillStyle = "white"
+context.strokeStyle = "blue"
+context.fillRect(432, 120, 107, 63)
+context.strokeRect(432, 120, 107, 63)
+
+//draw circle, need these 3 lines
+context.beginPath()
+context.arc(400, 400, 200, 0, 6.3)
+context.stroke()  //outline circle
+context.fill()    //fill circle
+
+
+</script>

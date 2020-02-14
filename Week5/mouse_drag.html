@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mouse Events</title>
+
+  <style>
+
+    #canvas {
+      border: 1px black solid;
+    }
+
+  </style>
+
+</head>
+<body>
+
+
+<P>Drag the mouse on the canvas</P>
+<canvas id="canvas" height="400" width="400"></canvas>
+
+<div id="controls">
+
+    <span>Radius of drawing</span>
+    <span id="radiusSize">1</span>
+    <input id="userRadius" type="range" value="5" step="1" min="1" max="25"></input>
+    <span id="radiusSize">25</span>
+    <p>
+    <span>Color of drawing</span>
+    <input id="color" type="color" name="color" value="#000000">
+    </p>
+    <p>
+        Clear Screen
+        <button id="clear">Clear</button>
+    </p>
+
+</div>
+
+<script>
+
+    let clearButton = document.querySelector("clear");
+  var canvas = document.getElementById("canvas");
+  var context = canvas.getContext("2d");
+  
+  var mousedown = false 
+
+  canvas.addEventListener("mousedown", function() {
+    mousedown = true
+  });
+
+  canvas.addEventListener("mouseup", function() {
+    mousedown = false 
+  })
+
+  canvas.addEventListener("mousemove", function() {
+
+    if (!mousedown) { return; }
+
+    // event is a built-in variable, contains the event that triggered this function
+    // get the x, y location of the event
+    var x = event.offsetX;
+    var y = event.offsetY;   //offsetX, offsetY, may not work in older browsers
+
+    //Draw a filled rectangle centered under the mouse click
+    //x, y is the top left corner, so shift up and left by 5 to center it under the mouse.
+    //context.fillRect(x-5, y-5, 10, 10);
+
+    context.beginPath()
+    context.arc(x - 5, y - 5, 5, 0, 6.3)
+    context.stroke()
+    context.fill()
+
+  })
+
+  clearButton.addEventListener("click", function() {
+      
+  })
+</script>
+
+</body>
+</html>
