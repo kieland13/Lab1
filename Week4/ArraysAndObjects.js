@@ -234,10 +234,40 @@ let nobel_prize_winners_2017 = {
   ]
 };
 
-console.log(nobel_prize_winners_2017)
 
-console.log(nobel_prize_winners_2017.prizes[3].laureates)
+//console.log(JSON.stringify(nobel_prize_winners_2017.prizes[3].laureates.firstname))
+//console.log(JSON.stringify(nobel_prize_winners_2017.prizes[0]))
+//console.log(nobel_prize_winners_2017)
 
-if (nobel_prize_winners_2017.prizes.category == 'physics') {
-  console.log(nobel_prize_winners_2017.prizes.category[0])
-}
+console.log(nobel_prize_winners_2017.prizes[3].laureates[0].firstname + " " + nobel_prize_winners_2017.prizes[3].laureates[0].surname)
+
+//
+nobel_prize_winners_2017.prizes[0].laureates.forEach( function(laureates){
+  console.log(laureates.id)
+})
+
+//
+let prizesCat = [];
+
+nobel_prize_winners_2017.prizes.forEach( function(prizes) {
+  prizesCat.push(prizes.category)
+})
+let allPrizeCat = prizesCat.join(', ')
+console.log(allPrizeCat)
+
+//
+let numPrize = [];
+nobel_prize_winners_2017.prizes.forEach( function(prizes) {
+  numPrize.push(prizes.category)
+})
+console.log('There are ' + numPrize.length + ' prize categories')
+
+//
+let numLaur = []
+nobel_prize_winners_2017.prizes.forEach( function(prizes) {
+  prizes.laureates.forEach( function(laureates) {
+    numLaur.push(laureates.id)
+  })
+})
+
+console.log(numLaur.length)

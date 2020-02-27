@@ -23,22 +23,23 @@
 
     <span>Radius of drawing</span>
     <span id="radiusSize">1</span>
-    <input id="userRadius" type="range" value="5" step="1" min="1" max="25"></input>
+    <input id="userRadius" type="range" value="5" min="1" max="25"></input>
     <span id="radiusSize">25</span>
     <p>
-    <span>Color of drawing</span>
+    <label for="color">Color of drawing:</label>
     <input id="color" type="color" name="color" value="#000000">
     </p>
     <p>
         Clear Screen
-        <button id="clear">Clear</button>
+        <button onclick="clearCanvas()">Clear</button>
     </p>
 
 </div>
 
 <script>
-
-    let clearButton = document.querySelector("clear");
+  let slider = document.getElementById("userRadius");
+  let colorButton = document.getElementById("color");
+  let clearButton = document.querySelector("clear");
   var canvas = document.getElementById("canvas");
   var context = canvas.getContext("2d");
   
@@ -66,15 +67,25 @@
     //context.fillRect(x-5, y-5, 10, 10);
 
     context.beginPath()
-    context.arc(x - 5, y - 5, 5, 0, 6.3)
-    context.stroke()
-    context.fill()
+    context.arc(x - 5, y - 5, document.getElementById('userRadius').value, 0, 6.3)
+    //context.stroke()
+    //context.fill()
+    context.strokeStyle = document.getElementById('color').value
+    context.fillStyle = document.getElementById('color').value
+    context.stroke();
+    context.fill();
 
   })
 
-  clearButton.addEventListener("click", function() {
-      
-  })
+    slider.oninput = function() {
+
+    }
+
+    function clearCanvas() {
+      context.clearRect(0, 0, canvas.width, canvas.height);
+    }
+
+  
 </script>
 
 </body>
