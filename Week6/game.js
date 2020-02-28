@@ -41,8 +41,9 @@ submitButton.addEventListener("click", function() { //whenever the user clicks t
     .then(countryData => {  
       let cityName = countryData[1][0]['capitalCity']       //creates the capital name form the API and stores it into the cityName variable
       console.log(cityName)
-      if(answer.length == 0) {      //this is supposed to check if the user input is empty
-          resultTextElement.innerHTML = `Please enter something in to guess the capital.`
+      //if(answer.length == 0) {      //this is supposed to check if the user input is empty
+      while( answer.length == 0) {    
+      resultTextElement.innerHTML = `Please enter something in to guess the capital.`
       }
       if (answer.trim().toLowerCase() != cityName.toLowerCase()) {  //takes the answer and compares to see if it is right or not
           resultTextElement.innerHTML = `That is wrong. the Captial city of ${randomCountryName} is not ${answer}, it is actually ${cityName}.`

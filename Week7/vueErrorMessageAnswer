@@ -1,0 +1,15 @@
+Lab 7 Question 2
+
+What does the vue error message mean? What causes it, and how do you fix it?
+
+One thing that can cause this error is if a vairable is misspelled but thats typically not the case.
+
+What this error means, is Vue is trying to render the component and the component wants to use the property "total"
+but cant find "total" anywhere.
+
+To fix this we should do:
+1. Double check all the variables within the page are consistent and when we call upon them, 
+they are consistent there as well.
+2. That property or method is on a different component, so double check your parenthesis and 
+brackets to make sure everything 
+is lined up correctly.
