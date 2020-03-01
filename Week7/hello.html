@@ -24,15 +24,22 @@
         el: '#app',
         data: {
             message: 'Hi',
+            exclamationCounter: 0,
+            exclamationLimit: 10,
+
         },
         methods: {
             addExclamation: function() {
                 let characterToAdd = '!'
+                if (this.exclamationCounter < this.exclamationLimit) {
                 this.message += characterToAdd
+                this.exclamationCounter++
+                }
 
             },
             clearButton: function() {
                 this.message = 'Hi'
+                this.exclamationCounter = 0
             },
 
         },
