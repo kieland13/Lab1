@@ -1,0 +1,72 @@
+.header {
+    font-family: 'Anton', sans-serif;
+    color:blue;
+    font-weight: 40%;
+    text-indent: 1%;
+    font-size:65px;
+    background-color: #EC641B;
+    border-style:ridge;
+    border-color: black;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, #5684F7, white) ;
+
+  }
+  
+  .navbar {
+    overflow: hidden;
+    background-color: slategrey;
+  }
+  .updated {
+    text-align: right;
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    background-color:blue;
+    border-radius: 20px;
+  }
+  .standings {
+    font-weight: bolder;
+    text-align: center;
+  }
+  .conference {
+    font-weight: bold;
+    text-align: center;
+  
+  }
+  table {
+    margin:50px;
+  }
+  table, th, td {
+    border: 1px solid black;
+    text-align: center;
+  
+  }
+  .division {
+    font-size: x-large;
+  }
+  .loss {
+    color: red;
+  }
+  .win {
+    color:green;
+  }
+.standingsButton {
+  background-color: gray;
+  color: white;
+  text-align: center;
+  width: 150px;
+  margin: 10px 40%;
+  border:1px solid black;
+  padding: 2px 10px;
+}
