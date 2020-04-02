@@ -39,34 +39,22 @@ body {
     font-weight: bolder;
     text-align: center;
   }
-  .conference {
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .score {
+    font-size: 25px;
+  }
+
+  .tables {
+    font-size: 15px;
+  }
+
+  .winner {
     font-weight: bold;
-    text-align: center;
+  }
   
-  }
-  table {
-    margin:50px;
-  }
-  table, th, td {
-    border: 1px solid black;
-    text-align: center;
-  
-  }
-  .division {
-    font-size: x-large;
-  }
-  .loss {
-    color: red;
-  }
-  .win {
-    color:green;
-  }
-.standingsButton {
-  background-color: gray;
-  color: white;
-  text-align: center;
-  width: 150px;
-  margin: 10px 40%;
-  border:1px solid black;
-  padding: 2px 10px;
-}
+
