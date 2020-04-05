@@ -9,7 +9,8 @@
         <link rel="stylesheet" href="NbaNow.css" type="text/css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+        <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+        <script async defer src="nbaPlayers.js"></script>
         <title>Nba Now</title>
     </head>
 
@@ -25,22 +26,39 @@
                 <a href="NbaLogin.html">Login</a>
         </h1>
 
-        <div class="col-md-7">
-            <form class="ml-3">
-                <p>
-                    <label for="your-name">Here is where you can search by First or Last Name:</label>
-                    <input id="your-name" class="form-control" name="your-name" type="text" maxlength="70" required>
+        <div>
+                <p class = "playerName">
+                   Name: <input id="name"><button id="search">Search</button>
                 </p>
 
                 <div>
-                    <p>
-                    <input class="btn btn-primary mt-2" type="submit">
-                    </p>
-                </div>         
-                
-            </form>
+                    <table style="width:90%">
+                        <tr>
+                            <th>Player Name</th>
+                            <th>Position</th>
+                            <th>Height(Feet)</th>
+                            <th>Height(Inches)</th>
+                            <th>Weight(Lbs)</th>
+                            <th>Team</th>
+                        </tr>
+                        <tr>
+                            <td id="results"></td>
+                            <td id="postionResults"></td>
+                            <td id="feetHeight"></td>
+                            <td id="inchesHeight"></td>
+                            <td id="weight"></td>
+                            <td id="teamResults"></td>
+                        </tr>
+                        </table>
+                </div>
         </div>
 
         
     </body>
+
+    <style>
+        .playerName {
+            color:white;
+        }
+    </style>
 </html>

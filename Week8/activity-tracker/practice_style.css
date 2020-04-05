@@ -2,3 +2,15 @@
     max-height: 250px;
     overflow: scroll;
 }
+
+.art-sketching {
+    color:red;
+}
+
+.art-painting {
+    color: blue;
+}
+
+.art-drawing {
+    color:green;
+}
