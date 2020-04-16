@@ -17,7 +17,8 @@
                     <th v-show="editTable">Delete</th>
                 </tr>
                 <StudentRow
-                    v-for="student in students" v-bind:key="student.name"
+                    v-for="student in students"
+                    v-bind:key="student.name"
                     v-bind:student="student"
                     v-bind:edit="editTable"
                     v-on:student-present="studentArrivedOrLeft"
