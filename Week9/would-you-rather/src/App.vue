@@ -1,4 +1,5 @@
 <template>
+
   <div id="app">
     <h1>Would you rather...</h1>  
 
@@ -10,11 +11,11 @@
     ></WouldYouRatherQuestion>
 
     <h2>You Would Rather...</h2>  
-    <ul id="answerList">
+    <ul class="answerList">
         <li
           v-for="choice in choices"
           v-bind:key="choice.id"
-        > {{ choice.choice }} </li>
+        > {{ choice }} </li>
       </ul>
   </div>
 </template>
@@ -53,11 +54,11 @@ export default {
   },
   methods: {
     answerChanged(choice) {
-        this.choices.push(choice)
-        // how to replace existing object where key exists?
-        this.choices.sort(function(c1, c2) {
-          return c1.ed > c2.id ? 1 : -1
-        })
+
+        let index = choice.id
+        this.choices[index] = choice.choice
+        this.$set(this.choices, index, choice.choice)
+      
     },
   },
 }
@@ -65,4 +66,34 @@ export default {
 
 
 <style>
+
+body {
+  background-color:peachpuff;
+}
+
+h1 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:blue;
+  font-weight: bold;
+  text-align: center;
+  font-size: 40px;
+}
+
+li {
+  text-align: center;
+}
+.answerList {
+  color:darkslategrey;
+  font-weight: bold;
+  text-align: center;
+  font-size: 19px;
+}
+
+h2 {
+  color:darkblue;
+  font-size:30px;
+  text-align: center;
+}
+
+
 </style>
